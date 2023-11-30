@@ -11,7 +11,7 @@ server {
     ssl_certificate /etc/letsencrypt/live/brewstreet.com.br/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/brewstreet.com.br/privkey.pem;
 
-    location /api {
+    location /api/ {
         proxy_pass http://localhost:12050;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
